@@ -12,6 +12,7 @@ Topology:
 
 References:
 
+    USE THIS: https://github.com/JoseCarvalho1026/VPN/blob/main/Enta/server_ra.md
     client&server.conf templates: https://github.com/OpenVPN/openvpn/tree/master/sample/sample-config-files
 
 Test this(from: jaime-10-reis):
@@ -49,3 +50,4 @@ explicit-exit-notify 1
 
 ➜ `systemctl disable openvpn` && `systemctl stop openvpn`
 ➜ `systemctl enable --now openvpn@server_ra`
+
