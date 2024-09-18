@@ -12,8 +12,8 @@ Topology:
 
 Easy install:
 - go to [https://github.com/angristan/openvpn-install]
-- 'chmod +x openvpn-install.sh'
-- 'sudo ./openvpn-install.sh'
+- `chmod +x openvpn-install.sh`
+- `sudo ./openvpn-install.sh`
 - follow the prompts
 - generate the client .ovpn file and send it to the client
 - the vpn should be setup.
