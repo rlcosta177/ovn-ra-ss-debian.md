@@ -10,6 +10,16 @@ Topology:
     VPN Server: Lux East
     Clients: new client for remote access(maybe done in us-east-1? not sure) 
 
+Easy install:
+- go to [https://github.com/angristan/openvpn-install]
+- 'chmod +x openvpn-install.sh'
+- 'sudo ./openvpn-install.sh'
+- follow the prompts
+- generate the client .ovpn file and send it to the client
+- the vpn should be setup.
+- if running on arch, there could be an error however(openssh server fails to start)
+  - refer to this link for the fix(antonpetrovmain's comment): [https://github.com/angristan/openvpn-install/issues/1214]
+
 References:
 
     USE THIS: https://github.com/JoseCarvalho1026/VPN/blob/main/Enta/server_ra.md
