@@ -96,7 +96,7 @@ remote access:
  </tls-crypt>
  ```
 
- directory in which server.conf file is at:
+ directory in which server.conf file is at(generaly /etc/openvpn/server/):
  ```bash
  -rw------- 1 root   root    1204 Sep 19 10:01 ca.crt
  -rw------- 1 root   root    1704 Sep 19 10:01 ca.key
