@@ -20,12 +20,7 @@ Easy install:
 - if running on arch, there could be an error however(openssh server fails to start)
   - refer to this link for the fix(antonpetrovmain's comment): [https://github.com/angristan/openvpn-install/issues/1214]
 
-References:
-
-    USE THIS: https://github.com/JoseCarvalho1026/VPN/blob/main/Enta/server_ra.md
-    client&server.conf templates: https://github.com/OpenVPN/openvpn/tree/master/sample/sample-config-files
-
-Test this(from: jaime-10-reis):
+---
 
 Server:
   - the ta.key file should be the same on everyone machine that you install OpenVPN.
@@ -67,21 +62,6 @@ remote access:
  explicit-exit-notify
  ```
 
- directory in which server.conf file is at:
- ```bash
- -rw------- 1 root   root    1204 Sep 19 10:01 ca.crt
- -rw------- 1 root   root    1704 Sep 19 10:01 ca.key
- -rw-r----- 1 root   root     186 Sep 19 10:01 client-common.txt
- -rw------- 1 nobody nogroup  650 Sep 19 10:01 crl.pem
- -rw-r----- 1 root   root     424 Sep 19 10:01 dh.pem
- drwxr-xr-x 5 root   root    4096 Sep 19 10:01 easy-rsa
- -rw------- 1 root   root       0 Sep 19 10:11 ipp.txt
- -rw-r----- 1 root   root     444 Sep 19 10:01 server.conf
- -rw------- 1 root   root    4511 Sep 19 10:01 server.crt
- -rw------- 1 root   root    1704 Sep 19 10:01 server.key
- -rw------- 1 root   root     636 Sep 19 10:01 tc.key
- ```
-
  client.conf file example:
 
  ```bash
@@ -115,6 +95,22 @@ remote access:
  -----END OpenVPN Static key V1-----
  </tls-crypt>
  ```
-➜ `systemctl disable openvpn` && `systemctl stop openvpn`
-➜ `systemctl enable --now openvpn@server_ra`
+
+ directory in which server.conf file is at:
+ ```bash
+ -rw------- 1 root   root    1204 Sep 19 10:01 ca.crt
+ -rw------- 1 root   root    1704 Sep 19 10:01 ca.key
+ -rw-r----- 1 root   root     186 Sep 19 10:01 client-common.txt
+ -rw------- 1 nobody nogroup  650 Sep 19 10:01 crl.pem
+ -rw-r----- 1 root   root     424 Sep 19 10:01 dh.pem
+ drwxr-xr-x 5 root   root    4096 Sep 19 10:01 easy-rsa
+ -rw------- 1 root   root       0 Sep 19 10:11 ipp.txt
+ -rw-r----- 1 root   root     444 Sep 19 10:01 server.conf
+ -rw------- 1 root   root    4511 Sep 19 10:01 server.crt
+ -rw------- 1 root   root    1704 Sep 19 10:01 server.key
+ -rw------- 1 root   root     636 Sep 19 10:01 tc.key
+ ```
+
+- `systemctl disable openvpn` && `systemctl stop openvpn`
+- `systemctl enable --now openvpn@server_ra`
 
