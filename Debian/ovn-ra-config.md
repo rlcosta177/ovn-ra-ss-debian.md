@@ -8,7 +8,7 @@ Topology:
 
     Certificate Authority: Lux East(lux-east will operate as the vpn server, but will seperately be the CA as well, so you can think of the CA as being a different machine that will sign the requests of lux-east and lux-west servers)
     VPN Server: Lux East
-    Clients: new client for remote access(maybe done in us-east-1? not sure) 
+    Clients: any machine outside the vpn server's network
 
 Easy install:
 - go to [https://github.com/angristan/openvpn-install]
