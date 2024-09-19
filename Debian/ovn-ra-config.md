@@ -68,7 +68,7 @@ remote access:
  client
  dev tun
  proto udp
- remote 83.240.144.61 1194
+ remote <your-vpn-server-public-ip> 1194
  resolv-retry infinite
  nobind
  persist-key
