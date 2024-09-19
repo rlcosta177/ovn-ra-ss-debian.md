@@ -111,6 +111,7 @@ remote access:
  -rw------- 1 root   root     636 Sep 19 10:01 tc.key
  ```
 
+Ending:
 - `systemctl disable openvpn` && `systemctl stop openvpn`
 - `systemctl enable --now openvpn@server_ra`
-
+- create a port forwarding rule on your router/firewall for openvpn traffic to flow through
